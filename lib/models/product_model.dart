@@ -27,7 +27,7 @@ class ProductModel extends Equatable {
         pictureOri: json['picture_ori'],
         createdAt:
             DateTime.parse(json['created_at'] ?? DateTime.now().toString()),
-        price: double.parse(json['price'] ?? "12000"),
+        price: double.parse(json['price'] != "" ? json['price'] : "12000"),
         id: json['id'],
       );
 
